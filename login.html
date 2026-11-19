@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Wholesale customer login — inventory and pricing for Citadel Brands styles.">
+    <title>Log in | Citadel Brands</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&amp;family=Instrument+Sans:wght@400..700&amp;display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/type.css">
+    <meta name="robots" content="noindex, follow">
+</head>
+  <body id="top" class="cb-solid-header">
+    <header class="cb-site-header">
+      <nav class="cb-nav" aria-label="Main navigation">
+        <a class="cb-logo" href="index.html"><img
+            src="assets/logos/citadel-brands-logo-white.png"
+            alt="Citadel Brands"></a>
+
+        <div class="cb-nav-panel" id="cb-nav-panel">
+          <ul class="cb-nav-links">
+            <li class="cb-has-menu">
+              <button class="cb-nav-link" type="button" aria-expanded="false"
+                aria-controls="cb-mega"
+                data-panel="brands">Brands<span
+                  class="cb-caret" aria-hidden="true"></span></button>
+            </li>
+            <li class="cb-has-menu">
+              <button class="cb-nav-link" type="button" aria-expanded="false"
+                aria-controls="cb-mega"
+                data-panel="categories">Categories<span
+                  class="cb-caret" aria-hidden="true"></span></button>
+            </li>
+            <li class="cb-has-menu">
+              <button class="cb-nav-link" type="button" aria-expanded="false"
+                aria-controls="cb-mega"
+                data-panel="closeouts">Outlet<span
+                  class="cb-caret" aria-hidden="true"></span></button>
+            </li>
+            <li><a class="cb-nav-link" href="sustainability.html">Sustainability</a></li>
+          </ul>
+
+          <!-- Mega menu: panels are built by assets/js/site.js (one per tab) -->
+          <div class="cb-mega" id="cb-mega" aria-label="Shop menu"></div>
+
+          <form class="cb-search" role="search" action="#" novalidate>
+            <label class="cb-visually-hidden" for="cb-search-input">Search
+              products</label>
+            <input id="cb-search-input" type="search" name="q"
+              placeholder="Search" autocomplete="off">
+            <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24"
+                aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path
+                  d="m15.5 15.5 5 5" /></svg></button>
+            <p class="cb-search-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <a class="cb-nav-account" href="login.html"><svg viewBox="0 0 24 24"
+              aria-hidden="true"><circle cx="12" cy="7.5" r="4.5" /><path
+                d="M3.5 22c0-5 3.8-8.5 8.5-8.5s8.5 3.5 8.5 8.5z" /></svg>Login /
+            Register</a>
+        </div>
+
+        <a class="cb-nav-cart" href="#footer" aria-label="Cart, 0 items"><svg
+            viewBox="0 0 24 24" aria-hidden="true"><path
+              d="M1.5 3h3l2.6 11.2a1.5 1.5 0 0 0 1.5 1.2h9.6a1.5 1.5 0 0 0 1.4-1.1L22 7H6" /><circle
+              cx="9.5" cy="20" r="1.6" /><circle cx="17.5" cy="20"
+              r="1.6" /></svg><span>Cart</span></a>
+
+        <button class="cb-menu-button" type="button"
+          aria-label="Open navigation" aria-expanded="false"
+          aria-controls="cb-nav-panel"><span></span><span></span><span></span></button>
+      </nav>
+    </header>
+
+    <main class="cb-login" id="main">
+      <section class="cb-login-art" aria-hidden="true">
+        <img src="assets/dark-theme/image-026-hd.jpg" alt="">
+        <div class="cb-login-art-copy">
+          <p class="cb-login-kicker">Wholesale account</p>
+          <h2>Live stock and your price, for every colour and size.</h2>
+          <ul>
+            <li>Inventory for every colour &times; size of each style</li>
+            <li>Price per piece, including closeout colours</li>
+            <li>Find colours in stock, running low or sold out</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cb-login-panel">
+        <!-- Sign-in form -->
+        <div class="cb-login-card cb-login-signin">
+          <button type="button" class="cb-login-close" aria-label="Close — continue without logging in" title="Close">&times;</button>
+          <p class="cb-login-kicker">Citadel Brands</p>
+          <h1>Log in</h1>
+          <p class="cb-login-sub">Sign in to your wholesale account to see inventory and pricing.</p>
+          <p class="cb-login-reason" hidden>Log in to see inventory and pricing for this style.</p>
+          <form class="cb-login-form" novalidate>
+            <label for="cb-login-email">Email</label>
+            <input id="cb-login-email" type="email" name="email" autocomplete="username" required placeholder="you@company.com">
+            <label for="cb-login-pass">Password</label>
+            <span class="cb-login-pw">
+              <input id="cb-login-pass" type="password" name="password" autocomplete="current-password" required>
+              <button type="button" class="cb-login-eye" aria-pressed="false" aria-controls="cb-login-pass">Show</button>
+            </span>
+            <div class="cb-login-row">
+              <label class="cb-login-check"><input type="checkbox" name="remember" checked> Keep me signed in</label>
+              <a href="#cb-login-help">Forgot password?</a>
+            </div>
+            <p class="cb-login-error" role="alert" hidden></p>
+            <button type="submit" class="cb-login-submit">Log in</button>
+          </form>
+          <div class="cb-login-test">
+            <div>
+              <b>Test account</b>
+              <span>Email: <code>test@citadelbrands.com</code></span>
+              <span>Password: <code>Citadel@2026</code></span>
+            </div>
+            <button type="button" class="cb-login-fill">Use test login</button>
+          </div>
+          <p class="cb-login-help" id="cb-login-help">New customer, or forgot your password? Call
+            <a href="tel:8002291240">800-229-1240</a> and our team will set you up.</p>
+          <a class="cb-login-skip" href="index.html">Continue without logging in &#8594;</a>
+        </div>
+
+        <!-- Signed-in account -->
+        <div class="cb-login-card cb-login-account" hidden>
+          <p class="cb-login-kicker">You're signed in</p>
+          <h1>Hi, <span class="cb-acc-name"></span></h1>
+          <dl class="cb-acc-list">
+            <div><dt>Email</dt><dd class="cb-acc-email"></dd></div>
+            <div><dt>Company</dt><dd class="cb-acc-company"></dd></div>
+            <div><dt>Account</dt><dd class="cb-acc-number"></dd></div>
+            <div><dt>Signed in until</dt><dd class="cb-acc-exp"></dd></div>
+          </dl>
+          <div class="cb-login-actions">
+            <a class="cb-login-submit cb-acc-continue" href="brand.html?brand=all">Browse styles</a>
+            <button type="button" class="cb-login-out">Log out</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="cb-site-footer" id="footer">
+      <div class="cb-footer-grid">
+        <div class="cb-footer-brand"><img
+            src="assets/logos/citadel-brands-logo.png" alt="Citadel Brands"
+            style="width:230px;height:auto"><p>Decorator-ready apparel from
+            leading brands, supported by fast fulfillment and dependable service
+            across the United States.</p><p>Kingstree, South
+            Carolina<br>800-229-1240</p></div>
+        <div><h4>Shop</h4><a href="brand.html?brand=all&amp;cat=tshirts">T-Shirts</a><a
+            href="brand.html?brand=all&amp;cat=fleece">Fleece</a><a href="brand.html?brand=all&amp;cat=polos">Polos</a><a
+            href="brand.html?brand=all&amp;cat=performance">Performance</a><a href="outlet.html">Outlet</a></div>
+        <div><h4>Brands</h4><a href="brand.html?brand=awdis">AWDis</a><a
+            href="brand.html?brand=woodbrook">Woodbrook</a><a href="index.html#featured">JH501</a><a
+            href="brand.html?brand=all&amp;tag=new">New Arrivals</a></div>
+        <div><h4>Company</h4><a href="index.html#model">Why Citadel</a><a href="index.html#vertical">Vertical supply chain</a><a href="index.html#sustainable">Sustainability</a><a
+            href="#footer">Contact</a><a href="#footer">Shipping</a><a
+            href="#footer">Privacy Policy</a></div>
+      </div>
+      <div class="cb-footer-bottom"><span>© 2026 Citadel Brands. All rights
+          reserved.</span><span>Static homepage demonstration</span></div>
+    </footer>
+
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/product-media.js"></script>
+    <script src="assets/js/site-config.js"></script>
+    <script src="assets/js/site-apply.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/login.js"></script>
+  </body>
+</html>

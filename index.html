@@ -1,0 +1,2254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Shop AWDis and Woodbrook wholesale blank apparel at Citadel Brands. Explore hoodies, heavyweight fleece, T-shirts, polos and performance styles.">
+  <title>Wholesale Blank Apparel, Hoodies &amp; Polos | Citadel Brands</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&amp;family=Instrument+Sans:wght@400..700&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/home.css?v=20261019-1">
+  <link rel="stylesheet" href="assets/css/type.css">
+  <style>
+    .cb-homepage-v4 {
+      --orange: #f26822;
+      --black: #090909;
+      --charcoal: #202020;
+      --line: #414141;
+      --max: 1860px;
+      background: var(--black);
+      color: #fff;
+      font-family: var(--cb-sans);
+      overflow: hidden
+    }
+
+    .cb-homepage-v4,
+    .cb-homepage-v4 * {
+      box-sizing: border-box
+    }
+
+    .cb-homepage-v4 img {
+      display: block;
+      max-width: 100%
+    }
+
+    .cb-homepage-v4 a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    .cb-homepage-v4 .cb-button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      border: 2px solid var(--orange);
+      background: var(--orange);
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      transition: .25s
+    }
+
+    .cb-homepage-v4 .cb-button:hover,
+    .cb-homepage-v4 .cb-button:focus {
+      background: #e85d00;
+      transform: translateY(-2px);
+      outline: none
+    }
+
+    /* Hero */
+    /* Hero fills the full screen and runs underneath the see-through header; copy is padded clear of the header */
+    .cb-homepage-v4 .cb-hero {
+      --values-h: clamp(84px, 11vh, 122px);
+      --ui-h: clamp(64px, 9vh, 92px);
+      --slide-ms: 7000ms;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      height: 100svh;
+      min-height: 640px;
+      padding-top: var(--cb-header-h);
+      background: #0b0b0b;
+      overflow: hidden
+    }
+
+    /* Slides: stacked, crossfade + slow zoom ("Ken Burns") on the active one */
+    .cb-homepage-v4 .cb-slides {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: var(--values-h);
+      overflow: hidden
+    }
+
+    .cb-homepage-v4 .cb-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 1.1s ease, visibility 0s linear 1.1s
+    }
+
+    .cb-homepage-v4 .cb-slide.cb-active {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+      transition: opacity 1.1s ease, visibility 0s
+    }
+
+    /* Short settle-in zoom that finishes at 100% so the photo is pin-sharp while it is on screen
+   (a zoom that runs the whole slide keeps the browser rendering the image soft) */
+    .cb-homepage-v4 .cb-slide-media {
+      position: absolute;
+      inset: 0;
+      transform: scale(1.05);
+      transition: transform 1s ease
+    }
+
+    .cb-homepage-v4 .cb-slide.cb-active .cb-slide-media {
+      transform: none;
+      transition: transform 1.8s cubic-bezier(.2, .7, .2, 1)
+    }
+
+    .cb-homepage-v4 .cb-slide-media>img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: var(--focus, center)
+    }
+
+    .cb-homepage-v4 .cb-hero-panels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr)
+    }
+
+    .cb-homepage-v4 .cb-hero-panels img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top
+    }
+
+    /* Shades: keep faces clean, darken only where the text sits */
+    .cb-homepage-v4 .cb-hero-shade {
+      position: absolute;
+      inset: 0;
+      pointer-events: none
+    }
+
+    .cb-homepage-v4 .cb-slide--center .cb-hero-shade {
+      background: linear-gradient(0deg, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, .45) 28%, rgba(0, 0, 0, 0) 52%)
+    }
+
+    .cb-homepage-v4 .cb-slide--left .cb-hero-shade {
+      background: linear-gradient(90deg, rgba(0, 0, 0, .78) 0%, rgba(0, 0, 0, .45) 34%, rgba(0, 0, 0, 0) 58%), linear-gradient(0deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, 0) 30%)
+    }
+
+    .cb-homepage-v4 .cb-slide--right .cb-hero-shade {
+      background: linear-gradient(270deg, rgba(0, 0, 0, .72) 0%, rgba(0, 0, 0, .4) 34%, rgba(0, 0, 0, 0) 58%), linear-gradient(0deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, 0) 30%)
+    }
+
+    /* Text animates in line by line on the active slide */
+    .cb-homepage-v4 .cb-anim {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .5s ease, transform .5s ease
+    }
+
+    .cb-homepage-v4 .cb-slide.cb-active .cb-anim {
+      opacity: 1;
+      transform: none;
+      transition: opacity .8s ease, transform .9s cubic-bezier(.2, .7, .2, 1);
+      transition-delay: calc(.35s + var(--i, 0) * .12s)
+    }
+
+    /* Slide 1 copy (centred, low over the chest area) */
+    .cb-homepage-v4 .cb-hero-copy {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      right: 0;
+      bottom: var(--ui-h);
+      width: min(620px, 90%);
+      margin: 0 auto;
+      text-align: center;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, .6)
+    }
+
+    .cb-homepage-v4 .cb-awdis-wordmark {
+      display: block;
+      width: clamp(140px, min(10vw, 17vh), 220px);
+      height: auto;
+      margin-inline: auto;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, .55))
+    }
+
+    .cb-homepage-v4 .cb-hero-copy h1,
+    .cb-homepage-v4 .cb-hero-copy h2 {
+      margin: clamp(8px, 1.6vh, 16px) 0 clamp(6px, 1.2vh, 12px);
+      padding: clamp(6px, 1.1vh, 11px) 0;
+      border-block: 1.5px solid rgba(255, 255, 255, .45);
+      font-size: clamp(34px, min(3.3vw, 6vh), 64px);
+      line-height: 1;
+      letter-spacing: -.02em
+    }
+
+    .cb-homepage-v4 .cb-hero-copy p {
+      margin: 4px 0;
+      font-size: clamp(16px, min(1.5vw, 2.8vh), 28px);
+      line-height: 1.15
+    }
+
+    .cb-homepage-v4 .cb-hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-top: clamp(12px, 2.2vh, 24px)
+    }
+
+    .cb-homepage-v4 .cb-hero-actions img {
+      width: 140px;
+      height: 52px;
+      object-fit: contain;
+      background: #fff
+    }
+
+    /* Slides 2-4 copy (side aligned) */
+    .cb-homepage-v4 .cb-slide-copy {
+      position: absolute;
+      z-index: 2;
+      bottom: calc(var(--ui-h) + 2vh);
+      width: min(560px, 42%);
+      text-shadow: 0 2px 14px rgba(0, 0, 0, .45)
+    }
+
+    .cb-homepage-v4 .cb-slide--left .cb-slide-copy {
+      left: clamp(24px, 6vw, 120px)
+    }
+
+    .cb-homepage-v4 .cb-slide--right .cb-slide-copy {
+      right: clamp(24px, 6vw, 120px)
+    }
+
+    .cb-homepage-v4 .cb-slide-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      background: rgba(242, 104, 34, .95);
+      font: 600 12px/1 var(--cb-sans);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      text-shadow: none
+    }
+
+    .cb-homepage-v4 .cb-slide-copy h1,
+    .cb-homepage-v4 .cb-slide-copy h2 {
+      margin: clamp(12px, 2vh, 20px) 0 clamp(10px, 1.6vh, 16px);
+      font-size: clamp(38px, min(3.9vw, 7vh), 74px);
+      line-height: 1;
+      letter-spacing: -.02em
+    }
+
+    .cb-homepage-v4 .cb-slide-copy p {
+      max-width: 460px;
+      margin: 0;
+      font-size: clamp(16px, min(1.25vw, 2.4vh), 22px);
+      line-height: 1.4;
+      color: rgba(255, 255, 255, .92)
+    }
+
+    .cb-homepage-v4 .cb-slide-copy .cb-hero-actions {
+      justify-content: flex-start
+    }
+
+    .cb-homepage-v4 .cb-button--ghost {
+      background: rgba(255, 255, 255, .08);
+      border-color: rgba(255, 255, 255, .85);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px)
+    }
+
+    .cb-homepage-v4 .cb-button--ghost:hover,
+    .cb-homepage-v4 .cb-button--ghost:focus {
+      background: #fff;
+      border-color: #fff;
+      color: #111
+    }
+
+    /* Slide 1: Heavyweight Fleece. Desktop uses a 2:1 version of the photo with real wall texture extended above,
+   anchored to the bottom so nobody is cropped; text sits in the open wall on the right. Tablet/phone use the original */
+    .cb-homepage-v4 .cb-slide--fleece .cb-slide-media {
+      background: linear-gradient(90deg, #8ad3ea 0%, #97d8ed 50%, #96daf2 100%)
+    }
+
+    .cb-homepage-v4 .cb-slide--fleece .cb-slide-media {
+      display: block
+    }
+
+    .cb-homepage-v4 .cb-slide--fleece .cb-slide-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center bottom
+    }
+
+    .cb-homepage-v4 .cb-slide--fleece .cb-slide-copy {
+      left: 73%;
+      right: 6.5%;
+      width: auto;
+      top: calc(50% + var(--cb-header-h) / 2 - var(--ui-h) / 2);
+      bottom: auto;
+      transform: translateY(-50%);
+      text-align: left
+    }
+
+    .cb-homepage-v4 .cb-slide--fleece .cb-slide-copy p {
+      margin-inline: 0;
+      font-size: clamp(15px, min(1.05vw, 2.2vh), 19px)
+    }
+
+    .cb-homepage-v4 .cb-slide--fleece .cb-slide-copy h1 {
+      font-size: clamp(34px, min(3.3vw, 6.4vh), 66px)
+    }
+
+    .cb-homepage-v4 .cb-slide--fleece .cb-slide-eyebrow {
+      font-size: 11px;
+      padding: 7px 11px
+    }
+
+    .cb-homepage-v4 .cb-slide--fleece .cb-hero-actions {
+      flex-wrap: wrap;
+      gap: 10px
+    }
+
+    .cb-homepage-v4 .cb-slide--fleece .cb-hero-actions .cb-button {
+      min-height: 46px;
+      padding: 0 18px
+    }
+
+    .cb-homepage-v4 .cb-slide--fleece .cb-hero-actions {
+      justify-content: flex-start
+    }
+
+    /* Dark text for light slides (desktop + tablet; on phones the text sits over the photo with a dark fade) */
+    @media(min-width:761px) {
+      .cb-homepage-v4 .cb-slide--light .cb-slide-copy {
+        color: #0f1f2e
+      }
+
+      .cb-homepage-v4 .cb-slide--light .cb-slide-copy p {
+        color: #1f3442
+      }
+
+      .cb-homepage-v4 .cb-slide--light .cb-button--ghost {
+        background: rgba(255, 255, 255, .35);
+        border-color: #0f1f2e;
+        color: #0f1f2e
+      }
+
+      .cb-homepage-v4 .cb-slide--light .cb-button--ghost:hover,
+      .cb-homepage-v4 .cb-slide--light .cb-button--ghost:focus {
+        background: #0f1f2e;
+        border-color: #0f1f2e;
+        color: #fff
+      }
+
+      /* Fleece: white headline and description over the photo */
+      .cb-homepage-v4 .cb-slide--fleece .cb-slide-copy h1 {
+        color: #fff
+      }
+
+      /* Controls switch to dark while a light slide is showing */
+      .cb-homepage-v4 .cb-hero.cb-on-light .cb-slider-count {
+        color: rgba(15, 31, 46, .6);
+        text-shadow: none
+      }
+
+      .cb-homepage-v4 .cb-hero.cb-on-light .cb-slider-count b {
+        color: #0f1f2e
+      }
+
+      .cb-homepage-v4 .cb-hero.cb-on-light .cb-slider-dots i {
+        background: rgba(15, 31, 46, .22)
+      }
+
+      .cb-homepage-v4 .cb-hero.cb-on-light .cb-slider-btn {
+        border-color: rgba(15, 31, 46, .45);
+        background: rgba(255, 255, 255, .35)
+      }
+
+      .cb-homepage-v4 .cb-hero.cb-on-light .cb-slider-btn svg {
+        stroke: #0f1f2e
+      }
+
+      .cb-homepage-v4 .cb-hero.cb-on-light .cb-slider-pause .cb-ico-play {
+        fill: #0f1f2e
+      }
+
+      .cb-homepage-v4 .cb-hero.cb-on-light .cb-slider-btn:hover svg,
+      .cb-homepage-v4 .cb-hero.cb-on-light .cb-slider-btn:focus-visible svg {
+        stroke: #fff
+      }
+    }
+
+    .cb-homepage-v4 .cb-slider-ui * {
+      transition: color .6s, background-color .6s, border-color .6s, stroke .6s
+    }
+
+    @media(max-width:1100px) {
+
+      /* Tablet: crop to the man on the left, photo starts under the header so his head is never covered */
+      .cb-homepage-v4 .cb-slide--fleece .cb-slide-media img {
+        position: absolute;
+        left: 0;
+        top: calc(var(--cb-header-h) - 20px);
+        width: 100%;
+        height: calc(100% - var(--cb-header-h) + 20px);
+        object-fit: cover;
+        object-position: 100% center;
+        -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 2.5%);
+        mask-image: linear-gradient(180deg, transparent 0, #000 2.5%)
+      }
+
+      .cb-homepage-v4 .cb-slide--fleece .cb-slide-copy {
+        left: 55%;
+        right: 7%
+      }
+    }
+
+    @media(max-width:760px) {
+
+      /* Phone: dark fade + white text at the bottom, like the other slides */
+      .cb-homepage-v4 .cb-slide--fleece .cb-slide-media img {
+        object-position: 6% center
+      }
+
+      .cb-homepage-v4 .cb-slide--fleece .cb-slide-copy h1 {
+        font-size: 40px
+      }
+
+      .cb-homepage-v4 .cb-slide--fleece .cb-slide-media:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, rgba(10, 22, 32, .9) 0%, rgba(10, 22, 32, .6) 36%, rgba(10, 22, 32, 0) 62%)
+      }
+
+      .cb-homepage-v4 .cb-slide--fleece .cb-slide-copy {
+        left: 18px;
+        right: 18px;
+        top: auto;
+        bottom: var(--ui-h);
+        transform: none;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, .4)
+      }
+    }
+
+    /* Slide 4: video. No zoom on video (keeps it smooth and sharp); stronger shade because the studio wall is light */
+    .cb-homepage-v4 .cb-slide--video .cb-slide-media,
+    .cb-homepage-v4 .cb-slide--video.cb-active .cb-slide-media {
+      transform: none
+    }
+
+    .cb-homepage-v4 .cb-slide-video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 22%;
+      background: #e9e7e4
+    }
+
+    /* No dark overlay on the video; a soft text shadow keeps the copy readable instead */
+    .cb-homepage-v4 .cb-slide--video .cb-hero-shade {
+      background: none
+    }
+
+    .cb-homepage-v4 .cb-slide--video .cb-slide-copy h2,
+    .cb-homepage-v4 .cb-slide--video .cb-slide-copy p {
+      text-shadow: 0 1px 3px rgba(0, 0, 0, .55), 0 2px 18px rgba(0, 0, 0, .35)
+    }
+
+    /* Slider controls: counter + progress bars (left), pause / prev / next (right) */
+    .cb-homepage-v4 .cb-slider-ui {
+      position: absolute;
+      z-index: 4;
+      left: 0;
+      right: 0;
+      bottom: var(--values-h);
+      height: var(--ui-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 0 clamp(18px, 2.4vw, 46px);
+      pointer-events: none
+    }
+
+    .cb-homepage-v4 .cb-slider-ui>* {
+      pointer-events: auto
+    }
+
+    .cb-homepage-v4 .cb-slider-progress {
+      display: flex;
+      align-items: center;
+      gap: 18px
+    }
+
+    .cb-homepage-v4 .cb-slider-count {
+      font: 600 15px/1 var(--cb-sans);
+      letter-spacing: .06em;
+      color: rgba(255, 255, 255, .7);
+      text-shadow: 0 1px 6px rgba(0, 0, 0, .5)
+    }
+
+    .cb-homepage-v4 .cb-slider-count b {
+      font-size: 22px;
+      color: #fff
+    }
+
+    .cb-homepage-v4 .cb-slider-dots {
+      display: flex;
+      gap: 8px
+    }
+
+    .cb-homepage-v4 .cb-slider-dots button {
+      width: clamp(34px, 4vw, 64px);
+      height: 22px;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center
+    }
+
+    .cb-homepage-v4 .cb-slider-dots i {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: rgba(255, 255, 255, .35);
+      overflow: hidden;
+      transition: height .2s
+    }
+
+    .cb-homepage-v4 .cb-slider-dots button:hover i,
+    .cb-homepage-v4 .cb-slider-dots button:focus-visible i {
+      height: 5px
+    }
+
+    .cb-homepage-v4 .cb-slider-dots button:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 3px
+    }
+
+    .cb-homepage-v4 .cb-slider-dots i:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--orange);
+      transform: scaleX(0);
+      transform-origin: left
+    }
+
+    .cb-homepage-v4 .cb-slider-dots .cb-done i:after {
+      transform: scaleX(1)
+    }
+
+    .cb-homepage-v4 .cb-slider-dots .cb-active i:after {
+      animation: cb-progress var(--slide-ms) linear forwards
+    }
+
+    .cb-homepage-v4 .cb-hero.cb-paused .cb-slider-dots .cb-active i:after {
+      animation-play-state: paused
+    }
+
+    .cb-homepage-v4 .cb-hero.cb-static .cb-slider-dots .cb-active i:after {
+      animation: none;
+      transform: scaleX(1)
+    }
+
+    @keyframes cb-progress {
+      from {
+        transform: scaleX(0)
+      }
+
+      to {
+        transform: scaleX(1)
+      }
+    }
+
+    .cb-homepage-v4 .cb-slider-buttons {
+      display: flex;
+      gap: 10px
+    }
+
+    .cb-homepage-v4 .cb-slider-btn {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      padding: 0;
+      border: 1px solid rgba(255, 255, 255, .4);
+      border-radius: 50%;
+      background: rgba(20, 20, 20, .28);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      cursor: pointer;
+      transition: background .25s, border-color .25s, transform .25s
+    }
+
+    .cb-homepage-v4 .cb-slider-btn:hover,
+    .cb-homepage-v4 .cb-slider-btn:focus-visible {
+      background: var(--orange);
+      border-color: var(--orange);
+      transform: scale(1.06);
+      outline: none
+    }
+
+    .cb-homepage-v4 .cb-slider-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round
+    }
+
+    .cb-homepage-v4 .cb-slider-pause .cb-ico-play {
+      display: none;
+      fill: #fff;
+      stroke: none
+    }
+
+    .cb-homepage-v4 .cb-hero.cb-user-paused .cb-slider-pause .cb-ico-play {
+      display: block
+    }
+
+    .cb-homepage-v4 .cb-hero.cb-user-paused .cb-slider-pause .cb-ico-pause {
+      display: none
+    }
+
+    .cb-homepage-v4 .cb-values {
+      position: relative;
+      z-index: 3;
+      flex: 0 0 auto;
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      height: var(--values-h);
+      background: var(--charcoal)
+    }
+
+    .cb-homepage-v4 .cb-value-card {
+      --card-bg: var(--charcoal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(14px, 1.3vw, 26px);
+      padding: 20px;
+      border-left: 1px solid var(--line);
+      background: var(--card-bg);
+      font: 500 clamp(14px, 1.1vw, 20px)/1.3 var(--cb-sans)
+    }
+
+    .cb-homepage-v4 .cb-value-card:first-child {
+      --card-bg: var(--orange);
+      border: 0
+    }
+
+    /* Orange highlight follows the mouse: hovered card turns orange, the default (first) card returns to charcoal */
+    .cb-homepage-v4 .cb-value-card {
+      cursor: default;
+      transition: background .3s ease
+    }
+
+    .cb-homepage-v4 .cb-value-icon {
+      transition: transform .3s ease
+    }
+
+    .cb-homepage-v4 .cb-values:hover .cb-value-card {
+      --card-bg: var(--charcoal)
+    }
+
+    .cb-homepage-v4 .cb-values .cb-value-card:hover {
+      --card-bg: var(--orange)
+    }
+
+    .cb-homepage-v4 .cb-value-card:hover .cb-value-icon {
+      transform: scale(1.08)
+    }
+
+    .cb-homepage-v4 .cb-value-icon {
+      flex: 0 0 auto;
+      width: clamp(40px, 3.3vw, 64px);
+      height: auto;
+      overflow: visible
+    }
+
+    .cb-homepage-v4 .cb-value-card:first-child .cb-value-icon {
+      width: clamp(52px, 4.4vw, 84px)
+    }
+
+    .cb-homepage-v4 .cb-value-icon .cb-fill {
+      fill: #fff
+    }
+
+    .cb-homepage-v4 .cb-value-icon .cb-line {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 3.5;
+      stroke-linecap: round;
+      stroke-linejoin: round
+    }
+
+    .cb-homepage-v4 .cb-value-icon .cb-cut {
+      fill: none;
+      stroke: var(--card-bg);
+      stroke-width: 2.8;
+      stroke-linecap: round;
+      stroke-linejoin: round
+    }
+
+    /* Categories */
+    .cb-homepage-v4 .cb-section {
+      padding: clamp(70px, 6vw, 115px) clamp(18px, 1.55vw, 30px)
+    }
+
+    .cb-homepage-v4 .cb-section-heading {
+      text-align: center;
+      margin: 0 auto 48px
+    }
+
+    .cb-homepage-v4 .cb-section-heading h2 {
+      margin: 0;
+      font-size: clamp(34px, 3.2vw, 58px);
+      line-height: 1;
+      letter-spacing: -.02em
+    }
+
+    .cb-homepage-v4 .cb-section-heading p {
+      margin: 14px 0 0;
+      font-size: clamp(16px, 1.2vw, 21px);
+      color: rgba(255, 255, 255, .72)
+    }
+
+    .cb-homepage-v4 #categories {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0
+    }
+
+    .cb-homepage-v4 .cb-category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0
+    }
+
+    .cb-homepage-v4 .cb-category-card {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      background: #151515
+    }
+
+    .cb-homepage-v4 .cb-category-card img {
+      width: 100%;
+      height: clamp(420px, 38vw, 720px);
+      object-fit: cover;
+      transition: .55s
+    }
+
+    .cb-homepage-v4 .cb-category-card:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, .75), rgba(0, 0, 0, .14) 44%, transparent 68%);
+      opacity: 0;
+      transition: .35s
+    }
+
+    .cb-homepage-v4 .cb-category-copy {
+      position: absolute;
+      z-index: 2;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: .35s
+    }
+
+    .cb-homepage-v4 .cb-category-copy h3 {
+      margin: 0 0 12px;
+      font-size: clamp(26px, 2.1vw, 38px)
+    }
+
+    .cb-homepage-v4 .cb-category-copy span {
+      display: inline-block;
+      padding: 10px 16px;
+      border: 2px solid #fff;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 600
+    }
+
+    .cb-homepage-v4 .cb-category-copy span {
+      transition: background-color .2s, border-color .2s;
+    }
+
+    .cb-homepage-v4 .cb-category-copy span:hover,
+    .cb-homepage-v4 .cb-category-card:focus-visible .cb-category-copy span {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: #fff;
+    }
+
+    .cb-homepage-v4 .cb-category-card:hover,
+    .cb-homepage-v4 .cb-category-card:focus {
+      outline: none
+    }
+
+    .cb-homepage-v4 .cb-category-card:hover img,
+    .cb-homepage-v4 .cb-category-card:focus img {
+      transform: scale(1.045)
+    }
+
+    .cb-homepage-v4 .cb-category-card:hover:after,
+    .cb-homepage-v4 .cb-category-card:focus:after,
+    .cb-homepage-v4 .cb-category-card:hover .cb-category-copy,
+    .cb-homepage-v4 .cb-category-card:focus .cb-category-copy {
+      opacity: 1;
+      transform: none
+    }
+
+    /* Brands and feature */
+    .cb-homepage-v4 .cb-brands {
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 170px minmax(590px, 46vw)
+    }
+
+    .cb-homepage-v4 .cb-brand-heading {
+      display: flex;
+      align-items: center;
+      padding: 35px 55px;
+      background: var(--orange)
+    }
+
+    .cb-homepage-v4 .cb-brand-heading h2 {
+      margin: 0;
+      font-size: clamp(34px, 3.2vw, 58px)
+    }
+
+    .cb-homepage-v4 .cb-brand-tile {
+      position: relative;
+      overflow: hidden
+    }
+
+    .cb-homepage-v4 .cb-brand-tile>img:not(.cb-brand-logo) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .6s
+    }
+
+    .cb-homepage-v4 .cb-brand-tile:hover>img:not(.cb-brand-logo) {
+      transform: scale(1.035)
+    }
+
+    .cb-homepage-v4 .cb-awdis-tile {
+      grid-column: 1;
+      grid-row: 2
+    }
+
+    .cb-homepage-v4 .cb-woodbrook-tile {
+      grid-column: 2;
+      grid-row: 1/3
+    }
+
+    .cb-homepage-v4 .cb-brand-logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap
+    }
+
+    /* AWDis guideline: official artwork, min 50px high on screen, never stretched, no effects */
+    .cb-homepage-v4 .cb-brand-logo.cb-awdis-wordmark {
+      width: clamp(200px, 22vw, 420px);
+      height: auto;
+      margin: 0;
+      filter: none
+    }
+
+    .cb-homepage-v4 .cb-woodbrook-logo {
+      text-align: center;
+      font-family: Georgia, serif;
+      font-size: clamp(40px, 4.5vw, 84px);
+      text-shadow: 0 3px 16px #000
+    }
+
+    .cb-homepage-v4 .cb-woodbrook-logo small {
+      display: block;
+      margin-top: 8px;
+      font-size: .45em;
+      letter-spacing: .08em
+    }
+
+    .cb-homepage-v4 .cb-jh501 {
+      position: relative;
+      display: block;
+      margin-top: 0;
+      aspect-ratio: 16/9;
+      overflow: hidden
+    }
+
+    .cb-homepage-v4 .cb-jh501>img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .7s
+    }
+
+    .cb-homepage-v4 .cb-jh501:hover>img {
+      transform: scale(1.015)
+    }
+
+    .cb-homepage-v4 .cb-jh501:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, .16)
+    }
+
+    .cb-homepage-v4 .cb-jh501-copy {
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      top: 7%;
+      transform: translateX(-50%);
+      text-align: center;
+      text-shadow: 0 3px 14px #000
+    }
+
+    .cb-homepage-v4 .cb-jh501-copy h2 {
+      margin: 0;
+      font-size: clamp(68px, 8vw, 150px);
+      line-height: .9
+    }
+
+    .cb-homepage-v4 .cb-jh501-copy p {
+      margin: 6px 0;
+      font-size: clamp(20px, 2vw, 40px);
+      font-weight: 600
+    }
+
+    .cb-homepage-v4 .cb-play {
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      top: 60%;
+      width: 84px;
+      height: 84px;
+      display: grid;
+      place-items: center;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: #fff;
+      color: var(--orange);
+      font-size: 30px;
+      padding-left: 5px;
+      box-shadow: 0 10px 32px rgba(0, 0, 0, .4)
+    }
+
+    /* Editorial and story */
+    /* Bento layout: wide feature + portrait, then tall | two stacked | tall */
+    .cb-homepage-v4 .cb-editorial-grid {
+      padding: 0;
+      display: grid;
+      gap: 0;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: clamp(420px, 33vw, 640px) clamp(240px, 19vw, 370px) clamp(240px, 19vw, 370px);
+      grid-template-areas: "e e e f" "a b b d" "a c c d"
+    }
+
+    .cb-homepage-v4 .cb-editorial-card {
+      position: relative;
+      display: block;
+      min-height: 0;
+      overflow: hidden;
+      background: #151515
+    }
+
+    .cb-homepage-v4 .cb-editorial-card>img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      transition: .55s
+    }
+
+    .cb-homepage-v4 .cb-editorial-card:hover>img {
+      transform: scale(1.025)
+    }
+
+    .cb-homepage-v4 .cb-editorial-copy {
+      position: absolute;
+      left: 34px;
+      right: 28px;
+      bottom: 34px;
+      z-index: 2;
+      text-shadow: 0 2px 12px #000
+    }
+
+    .cb-homepage-v4 .cb-editorial-copy:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: -34px;
+      right: -28px;
+      bottom: -34px;
+      height: 380px;
+      background: linear-gradient(0deg, rgba(0, 0, 0, .82), transparent)
+    }
+
+    /* Wide Varsity tile: people stand left of centre, so its text sits on the right */
+    .cb-homepage-v4 .cb-ed-right .cb-editorial-copy {
+      left: auto;
+      right: clamp(20px, 3vw, 48px);
+      width: min(460px, 37%)
+    }
+
+    .cb-homepage-v4 .cb-ed-right .cb-editorial-copy:before {
+      display: none
+    }
+
+    .cb-homepage-v4 .cb-ed-right:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(270deg, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, .5) 36%, rgba(0, 0, 0, 0) 60%)
+    }
+
+    .cb-homepage-v4 .cb-editorial-copy>span {
+      display: inline-block;
+      padding: 7px 11px;
+      background: rgba(0, 0, 0, .72);
+      text-transform: uppercase;
+      font-size: 12px
+    }
+
+    .cb-homepage-v4 .cb-editorial-copy h2 {
+      margin: 14px 0 10px;
+      font-size: clamp(28px, 2.3vw, 44px);
+      line-height: 1.02
+    }
+
+    .cb-homepage-v4 .cb-editorial-copy p {
+      max-width: 560px;
+      font-size: clamp(15px, 1vw, 18px);
+      line-height: 1.5
+    }
+
+    .cb-homepage-v4 .cb-story-strip {
+      min-height: 240px;
+      display: grid;
+      grid-template-columns: 27% 38% 35%;
+      align-items: center;
+      background: var(--orange);
+      overflow: hidden
+    }
+
+    .cb-homepage-v4 .cb-story-title {
+      padding: 35px clamp(18px, 1.55vw, 30px)
+    }
+
+    .cb-homepage-v4 .cb-story-title h2 {
+      margin: 0;
+      font-size: clamp(34px, 3vw, 54px);
+      line-height: 1
+    }
+
+    .cb-homepage-v4 .cb-story-copy {
+      padding: 20px 45px;
+      border-left: 1px solid rgba(255, 255, 255, .65)
+    }
+
+    .cb-homepage-v4 .cb-story-copy .cb-button,
+    .cb-homepage-v4 .cb-story-copy .cb-button:hover,
+    .cb-homepage-v4 .cb-story-copy .cb-button:focus {
+      background: #000;
+      border-color: #000;
+      color: #fff;
+    }
+
+    .cb-homepage-v4 .cb-story-copy p {
+      font-size: clamp(16px, 1.2vw, 22px);
+      line-height: 1.45
+    }
+
+    .cb-homepage-v4 .cb-story-image {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      mask-image: linear-gradient(90deg, transparent, #000 28%)
+    }
+
+    .cb-homepage-v4 .cb-lifestyle-grid {
+      height: min(73vw, 1390px);
+      display: grid;
+      grid-template-columns: 57% 43%;
+      grid-template-rows: 64% 36%
+    }
+
+    .cb-homepage-v4 .cb-lifestyle-grid figure {
+      position: relative;
+      margin: 0;
+      overflow: hidden
+    }
+
+    .cb-homepage-v4 .cb-lifestyle-grid figure:first-child {
+      grid-row: 1/3
+    }
+
+    .cb-homepage-v4 .cb-lifestyle-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    /* Instagram */
+    .cb-homepage-v4 .cb-instagram {
+      padding: 105px 0 0
+    }
+
+    .cb-homepage-v4 .cb-instagram-head {
+      max-width: var(--max);
+      margin: 0 auto 48px;
+      padding: 0 clamp(18px, 1.55vw, 30px);
+      display: grid;
+      grid-template-columns: 1fr 1.45fr auto;
+      align-items: center;
+      gap: 36px
+    }
+
+    .cb-homepage-v4 .cb-instagram-head h2 {
+      margin: 0;
+      font-size: clamp(34px, 3vw, 56px);
+      line-height: 1
+    }
+
+    .cb-homepage-v4 .cb-instagram-head p {
+      font-size: clamp(16px, 1.2vw, 21px);
+      line-height: 1.5;
+      color: rgba(255, 255, 255, .75)
+    }
+
+    .cb-homepage-v4 .cb-instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0
+    }
+
+    .cb-homepage-v4 .cb-instagram-grid a {
+      display: block;
+      overflow: hidden;
+      background: #eee
+    }
+
+    .cb-homepage-v4 .cb-instagram-grid img {
+      width: 100%;
+      aspect-ratio: 600/542;
+      object-fit: cover;
+      transition: .45s
+    }
+
+    .cb-homepage-v4 .cb-instagram-grid a:hover img {
+      transform: scale(1.035)
+    }
+
+    .cb-homepage-v4.cb-animate .cb-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease
+    }
+
+    .cb-homepage-v4.cb-animate .cb-reveal.cb-visible {
+      opacity: 1;
+      transform: none
+    }
+
+    .cb-homepage-v4 .cb-search-hit {
+      animation: cb-search-hit 1.8s ease
+    }
+
+    @keyframes cb-search-hit {
+
+      0%,
+      60% {
+        outline: 4px solid #f26822;
+        outline-offset: -4px
+      }
+
+      100% {
+        outline: 4px solid transparent;
+        outline-offset: -4px
+      }
+    }
+
+    @media(max-width:1100px) {
+      .cb-homepage-v4 .cb-category-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .cb-homepage-v4 .cb-editorial-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 460px 260px 260px 440px;
+        grid-template-areas: "e e" "a b" "a c" "d f"
+      }
+    }
+
+    @media(max-width:760px) {
+      .cb-homepage-v4 .cb-hero {
+        --values-h: 150px;
+        --ui-h: 64px;
+        min-height: 600px
+      }
+
+      .cb-homepage-v4 .cb-hero-panels {
+        display: block
+      }
+
+      .cb-homepage-v4 .cb-hero-panels img {
+        position: absolute;
+        inset: 0
+      }
+
+      .cb-homepage-v4 .cb-hero-panels img:first-child,
+      .cb-homepage-v4 .cb-hero-panels img:nth-child(3) {
+        display: none
+      }
+
+      .cb-homepage-v4 .cb-hero-copy {
+        width: calc(100% - 34px)
+      }
+
+      .cb-homepage-v4 .cb-hero-copy h2 {
+        font-size: 40px
+      }
+
+      .cb-homepage-v4 .cb-hero-copy p {
+        font-size: 18px
+      }
+
+      .cb-homepage-v4 .cb-hero-actions {
+        flex-wrap: wrap
+      }
+
+      .cb-homepage-v4 .cb-hero-actions img {
+        width: 120px;
+        height: 48px
+      }
+
+      .cb-homepage-v4 .cb-hero .cb-slide .cb-hero-shade {
+        background: linear-gradient(0deg, rgba(0, 0, 0, .88) 0%, rgba(0, 0, 0, .55) 36%, rgba(0, 0, 0, 0) 62%)
+      }
+
+      .cb-homepage-v4 .cb-slide-copy,
+      .cb-homepage-v4 .cb-slide--left .cb-slide-copy,
+      .cb-homepage-v4 .cb-slide--right .cb-slide-copy {
+        left: 18px;
+        right: 18px;
+        width: auto
+      }
+
+      .cb-homepage-v4 .cb-slide-copy h1,
+      .cb-homepage-v4 .cb-slide-copy h2 {
+        font-size: 40px
+      }
+
+      .cb-homepage-v4 .cb-slide-copy p {
+        font-size: 16px
+      }
+
+      .cb-homepage-v4 .cb-slider-btn {
+        width: 40px;
+        height: 40px
+      }
+
+      .cb-homepage-v4 .cb-slider-prev,
+      .cb-homepage-v4 .cb-slider-next,
+      .cb-homepage-v4 .cb-slider-count {
+        display: none
+      }
+
+      .cb-homepage-v4 .cb-values {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .cb-homepage-v4 .cb-value-card {
+        padding: 12px;
+        gap: 10px;
+        font-size: 13px
+      }
+
+      .cb-homepage-v4 .cb-value-icon {
+        width: 32px
+      }
+
+      .cb-homepage-v4 .cb-value-card:first-child .cb-value-icon {
+        width: 40px
+      }
+
+      .cb-homepage-v4 .cb-category-grid,
+      .cb-homepage-v4 .cb-instagram-head {
+        grid-template-columns: 1fr
+      }
+
+      .cb-homepage-v4 .cb-editorial-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 480px 190px 520px 320px;
+        grid-template-areas: "e e" "b c" "a a" "d f"
+      }
+
+      .cb-homepage-v4 .cb-category-card img {
+        height: 520px
+      }
+
+      .cb-homepage-v4 .cb-category-card:after,
+      .cb-homepage-v4 .cb-category-copy {
+        opacity: 1;
+        transform: none
+      }
+
+      .cb-homepage-v4 .cb-brands {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin-inline: 0
+      }
+
+      .cb-homepage-v4 .cb-brand-heading,
+      .cb-homepage-v4 .cb-awdis-tile,
+      .cb-homepage-v4 .cb-woodbrook-tile {
+        grid-column: 1;
+        grid-row: auto
+      }
+
+      .cb-homepage-v4 .cb-brand-tile {
+        min-height: 460px
+      }
+
+      .cb-homepage-v4 .cb-jh501 {
+        aspect-ratio: 4/3
+      }
+
+      .cb-homepage-v4 .cb-editorial-grid {
+        padding-inline: 0;
+        gap: 0
+      }
+
+      .cb-homepage-v4 .cb-editorial-copy {
+        left: 20px;
+        right: 20px;
+        bottom: 22px
+      }
+
+      .cb-homepage-v4 .cb-ed-right .cb-editorial-copy {
+        left: 20px;
+        right: 20px;
+        width: auto
+      }
+
+      .cb-homepage-v4 .cb-ed-right:after {
+        background: linear-gradient(0deg, rgba(0, 0, 0, .85) 0%, rgba(0, 0, 0, .4) 45%, rgba(0, 0, 0, 0) 70%)
+      }
+
+      .cb-homepage-v4 .cb-story-strip {
+        grid-template-columns: 1fr
+      }
+
+      .cb-homepage-v4 .cb-story-copy {
+        padding: 10px 24px 30px;
+        border: 0
+      }
+
+      .cb-homepage-v4 .cb-story-image {
+        height: 220px;
+        mask-image: linear-gradient(0deg, #000, transparent)
+      }
+
+      .cb-homepage-v4 .cb-lifestyle-grid {
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto
+      }
+
+      .cb-homepage-v4 .cb-lifestyle-grid figure,
+      .cb-homepage-v4 .cb-lifestyle-grid figure:first-child {
+        grid-row: auto;
+        min-height: 480px
+      }
+
+      .cb-homepage-v4 .cb-instagram-head {
+        gap: 14px
+      }
+
+      .cb-homepage-v4 .cb-instagram-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0
+      }
+
+      .cb-footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px
+      }
+
+      .cb-footer-brand {
+        grid-column: 1/-1
+      }
+
+      .cb-footer-bottom {
+        flex-direction: column
+      }
+    }
+
+    @media(max-width:480px) {
+      .cb-homepage-v4 .cb-hero .cb-awdis-wordmark {
+        width: 140px
+      }
+
+      .cb-homepage-v4 .cb-hero-copy h2 {
+        font-size: 36px
+      }
+
+      .cb-homepage-v4 .cb-hero-copy p {
+        font-size: 16px
+      }
+
+      .cb-homepage-v4 .cb-slide-copy h1,
+      .cb-homepage-v4 .cb-slide-copy h2 {
+        font-size: 34px
+      }
+
+      .cb-homepage-v4 .cb-hero-actions .cb-button {
+        min-height: 46px;
+        padding: 0 16px
+      }
+
+      .cb-homepage-v4 .cb-hero-actions img {
+        display: none
+      }
+
+      .cb-homepage-v4 .cb-category-card img {
+        height: 460px
+      }
+
+      .cb-homepage-v4 .cb-brand-tile {
+        min-height: 390px
+      }
+
+      .cb-homepage-v4 .cb-editorial-grid {
+        grid-template-rows: 440px 150px 480px 260px
+      }
+
+      .cb-homepage-v4 .cb-instagram-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      .cb-homepage-v4 .cb-slide-media,
+      .cb-homepage-v4 .cb-slide.cb-active .cb-slide-media {
+        transform: none !important
+      }
+
+      .cb-homepage-v4 * {
+        scroll-behavior: auto !important;
+        transition: none !important
+      }
+
+      .cb-homepage-v4.cb-animate .cb-reveal {
+        opacity: 1;
+        transform: none
+      }
+    }
+  </style>
+  <meta property="og:site_name" content="Citadel Brands">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wholesale Blank Apparel, Hoodies &amp; Polos | Citadel Brands">
+  <meta property="og:description" content="Shop AWDis and Woodbrook wholesale blank apparel at Citadel Brands. Explore hoodies, heavyweight fleece, T-shirts, polos and performance styles.">
+  <meta property="og:image" content="assets/figma/hero-fleece-group.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wholesale Blank Apparel, Hoodies &amp; Polos | Citadel Brands">
+  <meta name="twitter:description" content="Shop AWDis and Woodbrook wholesale blank apparel at Citadel Brands. Explore hoodies, heavyweight fleece, T-shirts, polos and performance styles.">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Citadel Brands","sameAs":["https://www.instagram.com/citadelbrands"]}
+  </script>
+</head>
+
+<body id="top">
+  <header class="cb-site-header">
+    <nav class="cb-nav" aria-label="Main navigation">
+      <a class="cb-logo" href="#top"><img src="assets/logos/citadel-brands-logo-white.png" alt="Citadel Brands"></a>
+
+      <div class="cb-nav-panel" id="cb-nav-panel">
+        <ul class="cb-nav-links">
+          <li class="cb-has-menu">
+            <button class="cb-nav-link" type="button" aria-expanded="false" aria-controls="cb-mega"
+              data-panel="brands">Brands<span class="cb-caret" aria-hidden="true"></span></button>
+          </li>
+          <li class="cb-has-menu">
+            <button class="cb-nav-link" type="button" aria-expanded="false" aria-controls="cb-mega"
+              data-panel="categories">Categories<span class="cb-caret" aria-hidden="true"></span></button>
+          </li>
+          <li class="cb-has-menu">
+            <button class="cb-nav-link" type="button" aria-expanded="false" aria-controls="cb-mega"
+              data-panel="closeouts">Outlet<span class="cb-caret" aria-hidden="true"></span></button>
+          </li>
+          <li><a class="cb-nav-link" href="sustainability.html">Sustainability</a></li>
+        </ul>
+
+        <!-- Mega menu: panels are built by assets/js/site.js (one per tab) -->
+        <div class="cb-mega" id="cb-mega" aria-label="Shop menu"></div>
+
+        <form class="cb-search" role="search" action="#" novalidate>
+          <label class="cb-visually-hidden" for="cb-search-input">Search
+            products</label>
+          <input id="cb-search-input" type="search" name="q" placeholder="Search" autocomplete="off">
+          <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m15.5 15.5 5 5" />
+            </svg></button>
+          <p class="cb-search-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <a class="cb-nav-account" href="login.html"><svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="7.5" r="4.5" />
+            <path d="M3.5 22c0-5 3.8-8.5 8.5-8.5s8.5 3.5 8.5 8.5z" />
+          </svg>Login /
+          Register</a>
+      </div>
+
+      <a class="cb-nav-cart" href="#footer" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M1.5 3h3l2.6 11.2a1.5 1.5 0 0 0 1.5 1.2h9.6a1.5 1.5 0 0 0 1.4-1.1L22 7H6" />
+          <circle cx="9.5" cy="20" r="1.6" />
+          <circle cx="17.5" cy="20" r="1.6" />
+        </svg><span>Cart</span></a>
+
+      <button class="cb-menu-button" type="button" aria-label="Open navigation" aria-expanded="false"
+        aria-controls="cb-nav-panel"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main class="cb-homepage-v4" id="cb-homepage-v4">
+    <section class="cb-hero" aria-roledescription="carousel" aria-label="Featured collections">
+      <div class="cb-slides" aria-live="off">
+
+        <!-- Slide 1: Heavyweight Fleece (wide studio image, text in the open wall space) -->
+        <div class="cb-slide cb-slide--fleece cb-active" aria-roledescription="slide"
+          aria-label="1 of 4">
+          <picture class="cb-slide-media" aria-hidden="true">
+            <source media="(min-width:1101px)" srcset="assets/figma/hero-fleece-group-wide.jpg">
+            <img src="assets/figma/hero-fleece-group.jpg" alt fetchpriority="high">
+          </picture>
+          <div class="cb-slide-copy">
+            <span class="cb-slide-eyebrow cb-anim" style="--i:0">New ·
+              Heavyweight Collection</span>
+            <h1 class="cb-anim" style="--i:1">Heavyweight<br>Fleece</h1>
+            <p class="cb-anim" style="--i:2">Thick, brushed-back fleece
+              built for real warmth — crews and hoods in everyday colours,
+              made to decorate.</p>
+            <div class="cb-hero-actions cb-anim" style="--i:3"><a class="cb-button"
+                href="brand.html?brand=awdis&amp;cat=fleece">Shop fleece</a><a class="cb-button cb-button--ghost"
+                href="brand.html?brand=awdis"><span>Explore <span class="cb-bn">AWDis</span></span></a></div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Varsity -->
+        <div class="cb-slide cb-slide--right" aria-roledescription="slide" aria-label="2 of 4" style="--focus:32% 0%">
+          <div class="cb-slide-media" aria-hidden="true"><img src="assets/dark-theme/image-004.jpg" alt loading="lazy">
+          </div>
+          <div class="cb-hero-shade"></div>
+          <div class="cb-slide-copy">
+            <span class="cb-slide-eyebrow cb-anim" style="--i:0">Fresh
+              Layers</span>
+            <h2 class="cb-anim" style="--i:1">The Varsity<br>Contrast
+              Hoodie</h2>
+            <p class="cb-anim" style="--i:2">A modern spin on a classic
+              varsity look — contrast details built for layering.</p>
+            <div class="cb-hero-actions cb-anim" style="--i:3"><a class="cb-button" href="#featured">Check it out</a><a
+                class="cb-button cb-button--ghost" href="brand.html?brand=awdis"><span>All <span
+                    class="cb-bn">AWDis</span></span></a></div>
+          </div>
+        </div>
+
+        <!-- Slide 3: AWDis Cotton T-Shirts (video; plays only while this slide is showing) -->
+        <div class="cb-slide cb-slide--left cb-slide--video" aria-roledescription="slide" aria-label="3 of 4">
+          <div class="cb-slide-media" aria-hidden="true">
+            <video class="cb-slide-video" muted playsinline loop preload="metadata"
+              poster="assets/videos/ATA_ATY-poster.jpg">
+              <source src="assets/videos/ATA_ATY.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="cb-hero-shade"></div>
+          <div class="cb-slide-copy">
+            <span class="cb-slide-eyebrow cb-anim" style="--i:0"><span class="cb-bn">AWDis</span> ·
+              Cotton Collection</span>
+            <h2 class="cb-anim" style="--i:1">AWDis<br>Cotton T-Shirts</h2>
+            <p class="cb-anim" style="--i:2">Soft, breathable everyday cotton
+              in the colours you wear most — a relaxed fit for the whole crew,
+              and a smooth canvas for print.</p>
+            <div class="cb-hero-actions cb-anim" style="--i:3"><a class="cb-button"
+                href="brand.html?brand=awdis&amp;cat=tshirts">Shop
+                T-shirts</a><a class="cb-button cb-button--ghost" href="#brands">Explore
+                AWDis</a></div>
+          </div>
+        </div>
+
+        <!-- Slide 4: Everyday T -->
+        <div class="cb-slide cb-slide--right" aria-roledescription="slide" aria-label="4 of 4" style="--focus:42% 15%">
+          <div class="cb-slide-media" aria-hidden="true"><img src="assets/dark-theme/image-010.jpg" alt loading="lazy">
+          </div>
+          <div class="cb-hero-shade"></div>
+          <div class="cb-slide-copy">
+            <span class="cb-slide-eyebrow cb-anim" style="--i:0">Everyday
+              Staples</span>
+            <h2 class="cb-anim" style="--i:1">Bold Colour.<br>Everyday T.</h2>
+            <p class="cb-anim" style="--i:2">Soft cotton comfort in fresh
+              seasonal hues. Easy to wear, easy to decorate.</p>
+            <div class="cb-hero-actions cb-anim" style="--i:3"><a class="cb-button"
+                href="brand.html?brand=awdis&amp;cat=tshirts">Shop
+                T-shirts</a><a class="cb-button cb-button--ghost" href="#featured">New
+                arrivals</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider controls -->
+      <div class="cb-slider-ui">
+        <div class="cb-slider-progress">
+          <span class="cb-slider-count"><b>01</b> / 04</span>
+          <div class="cb-slider-dots">
+            <button type="button" class="cb-active" aria-label="Go to slide 1"><i></i></button>
+            <button type="button" aria-label="Go to slide 2"><i></i></button>
+            <button type="button" aria-label="Go to slide 3" style="--slide-ms:10000ms"><i></i></button>
+            <button type="button" aria-label="Go to slide 4"><i></i></button>
+          </div>
+        </div>
+        <div class="cb-slider-buttons">
+          <button type="button" class="cb-slider-btn cb-slider-pause" aria-label="Pause slideshow"><svg
+              viewBox="0 0 24 24" aria-hidden="true">
+              <path class="cb-ico-pause" d="M8 5v14M16 5v14" />
+              <path class="cb-ico-play" d="M8 5l11 7-11 7z" />
+            </svg></button>
+          <button type="button" class="cb-slider-btn cb-slider-prev" aria-label="Previous slide"><svg
+              viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 5l-7 7 7 7" />
+            </svg></button>
+          <button type="button" class="cb-slider-btn cb-slider-next" aria-label="Next slide"><svg viewBox="0 0 24 24"
+              aria-hidden="true">
+              <path d="M9 5l7 7-7 7" />
+            </svg></button>
+        </div>
+      </div>
+      <div class="cb-values" aria-label="Service benefits">
+        <div class="cb-value-card">
+          <!-- Speeding delivery truck -->
+          <svg class="cb-value-icon" viewBox="0 0 72 56" aria-hidden="true">
+            <g class="cb-fill">
+              <rect x="1" y="12" width="17" height="4.5" rx="2.25" />
+              <rect x="4" y="22" width="14" height="4.5" rx="2.25" />
+              <rect x="1" y="32" width="17" height="4.5" rx="2.25" />
+              <path d="M21 8h26a3 3 0 0 1 3 3v29H21a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3z" />
+              <path fill-rule="evenodd"
+                d="M52 17h9.5a3 3 0 0 1 2.4 1.2l6.5 8.7a3 3 0 0 1 .6 1.8V37a3 3 0 0 1-3 3H52zM55.5 21v8h10l-6-8z" />
+              <path fill-rule="evenodd" d="M20 44a7 7 0 1 0 14 0a7 7 0 1 0-14 0zM24 44a3 3 0 1 0 6 0a3 3 0 1 0-6 0z" />
+              <path fill-rule="evenodd" d="M52 44a7 7 0 1 0 14 0a7 7 0 1 0-14 0zM56 44a3 3 0 1 0 6 0a3 3 0 1 0-6 0z" />
+            </g>
+          </svg>
+          <span>Free Freight on<br>$300+ Orders</span>
+        </div>
+        <div class="cb-value-card">
+          <!-- Stopwatch with tick -->
+          <svg class="cb-value-icon" viewBox="0 0 64 64" aria-hidden="true">
+            <g class="cb-line">
+              <circle cx="34" cy="34" r="17" />
+              <path d="M34 17v-5M29 10h10M47 20l3-3M34 25v9l6 4" />
+              <path d="M3 28h9M6 35h7M3 42h9" />
+            </g>
+            <circle class="cb-fill" cx="50" cy="50" r="9" />
+            <path class="cb-cut" d="M45.5 50.5l3 3 6-6.5" />
+          </svg>
+          <span>New Kansas City &amp; Los Angeles<br>Fulfillment Centers</span>
+        </div>
+        <div class="cb-value-card">
+          <!-- Globe -->
+          <svg class="cb-value-icon" viewBox="0 0 64 64" aria-hidden="true">
+            <g class="cb-line">
+              <circle cx="32" cy="32" r="23" />
+              <ellipse cx="32" cy="32" rx="10" ry="23" />
+              <path d="M9 32h46M13 20h38M13 44h38" />
+            </g>
+          </svg>
+          <span>Source for United Kingdom<br>Leading Brand</span>
+        </div>
+        <div class="cb-value-card">
+          <!-- Clock -->
+          <svg class="cb-value-icon" viewBox="0 0 64 64" aria-hidden="true">
+            <g class="cb-line">
+              <circle cx="32" cy="32" r="25" />
+              <circle cx="32" cy="32" r="18" stroke-width="2.5" />
+              <path d="M32 21v11l8 5" />
+              <path d="M32 15.5v2.5M48.5 32H46M32 48.5V46M15.5 32H18" stroke-width="2.5" />
+            </g>
+          </svg>
+          <span>Same-Day Shipping<br>Before 3PM</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="categories">
+      <header class="cb-section-heading cb-reveal">
+        <h2>Shop By
+          Category</h2>
+        <p>Explore our complete collection of decorator-ready
+          apparel</p>
+      </header>
+      <div class="cb-category-grid">
+        <a class="cb-category-card cb-reveal" href="brand.html?brand=all&amp;cat=fleece"
+          data-shop="JHA001,JHA101,JHA120"><img data-slot="cat-fleece" data-slot-label="Shop by category: Fleece"
+            src="assets/figma/category-fleece.png" alt="Fleece" loading="lazy">
+          <div class="cb-category-copy">
+            <h3>Fleece</h3><span>Shop
+              Now</span>
+          </div>
+        </a>
+        <a class="cb-category-card cb-reveal" href="brand.html?brand=all&amp;cat=polos"
+          data-shop="WBA010,WBA020,WBY020"><img data-slot="cat-polos" data-slot-label="Shop by category: Polos"
+            src="assets/figma/category-polos.png" alt="Polos" loading="lazy">
+          <div class="cb-category-copy">
+            <h3>Polos</h3><span>Shop
+              Now</span>
+          </div>
+        </a>
+        <a class="cb-category-card cb-reveal" href="brand.html?brand=all&amp;cat=tshirts"
+          data-shop="JTA001,ATA001,JCA001"><img data-slot="cat-tshirts" data-slot-label="Shop by category: T-Shirts"
+            src="assets/figma/category-tshirts.png" alt="T-Shirts" loading="lazy">
+          <div class="cb-category-copy">
+            <h3>T-Shirts</h3><span>Shop
+              Now</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Why Citadel: the three things that set the business apart -->
+    <section class="cb-model" id="model" aria-labelledby="cb-model-title">
+      <header class="cb-model-head cb-reveal">
+        <p class="cb-kicker">Why Citadel</p>
+        <h2 id="cb-model-title">Made, stocked and sold by one team.</h2>
+        <p>We run our own supply chain, build garments to last, and make sure
+          every piece we make gets sold and worn.</p>
+      </header>
+      <div class="cb-model-grid">
+        <a class="cb-model-card cb-reveal" href="#vertical">
+          <span class="cb-model-no">01</span>
+          <span class="cb-model-tag">Vertical</span>
+          <h3>From yarn to your door</h3>
+          <p>One supply chain from fabric to finished garment to our US
+            warehouses. Colours that match, prices that hold, stock
+            that&rsquo;s really there.</p>
+          <span class="cb-model-link">How it works <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg></span>
+        </a>
+        <a class="cb-model-card cb-reveal" id="model-sustainable" href="sustainability.html">
+          <span class="cb-model-no">02</span>
+          <span class="cb-model-tag">Sustainable</span>
+          <h3>Made to be worn, not wasted</h3>
+          <p>Garments built for years of wear and washing, fewer and fuller
+            shipments, and a plan for every piece we make.</p>
+          <span class="cb-model-link">Our commitments <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg></span>
+        </a>
+        <a class="cb-model-card cb-reveal" href="outlet.html">
+          <span class="cb-model-no">03</span>
+          <span class="cb-model-tag">Online outlet</span>
+          <h3>Slow-moving styles, online</h3>
+          <p>Marked-down colourways from stock, sold online in any quantity
+            and shipped the same day.</p>
+          <span class="cb-model-link">Shop the outlet <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Smart slider: every style, filtered by brand / collection (built by assets/js/home.js) -->
+    <section class="cb-rail" id="all-styles" aria-labelledby="cb-rail-title">
+      <div class="cb-rail-head">
+        <div>
+          <p class="cb-kicker">The full range</p>
+          <h2 id="cb-rail-title">Every Style, <span class="cb-rail-brandname">Every Brand</span></h2>
+        </div>
+        <div class="cb-rail-tabs" role="tablist" aria-label="Brand"></div>
+      </div>
+      <div class="cb-rail-chips" role="group" aria-label="Collection"></div>
+      <div class="cb-rail-viewport">
+        <button type="button" class="cb-rail-arrow cb-rail-prev" aria-label="Previous styles">&#8249;</button>
+        <div class="cb-rail-track" tabindex="0" aria-label="Styles"></div>
+        <button type="button" class="cb-rail-arrow cb-rail-next" aria-label="Next styles">&#8250;</button>
+      </div>
+      <div class="cb-rail-foot">
+        <div class="cb-rail-progress"><span></span></div>
+        <p class="cb-rail-count" aria-live="polite"></p>
+        <a class="cb-rail-all" href="brand.html?brand=all">View all styles
+          &#8594;</a>
+      </div>
+    </section>
+
+    <section class="cb-brands" id="brands">
+      <div class="cb-brand-heading cb-reveal">
+        <h2>Explore Our
+          Brands</h2>
+      </div>
+      <a class="cb-brand-tile cb-awdis-tile cb-reveal" href="brand.html?brand=awdis"
+        data-shop="JHA001,JHA030,JHA101"><img data-slot="brand-awdis" data-slot-label="Our brands: AWDis tile"
+          src="assets/figma/brand-awdis.png" alt="AWDis hoodies" loading="lazy"><img
+          class="cb-brand-logo cb-awdis-wordmark" src="assets/logos/awdis-logo-white.png" alt="AWDis"></a>
+      <a class="cb-brand-tile cb-woodbrook-tile cb-reveal" href="brand.html?brand=woodbrook"
+        data-shop="WBA010,WBA020"><img data-slot="brand-woodbrook" data-slot-label="Our brands: WoodBrook tile"
+          src="assets/figma/brand-woodbrook.png" alt="Woodbrook polo fabrics" loading="lazy"><span
+          class="cb-brand-logo cb-woodbrook-logo">WOODBROOK<small>CLOTHING</small></span></a>
+    </section>
+
+    <!-- Vertical brand showcase: colour packshots scrolling by brand (built by assets/js/home.js) -->
+    <section class="cb-vshow" id="brand-showcase" aria-labelledby="cb-vshow-title">
+      <div class="cb-vshow-side">
+        <p class="cb-kicker">Brand showcase</p>
+        <h2 id="cb-vshow-title">Every colour.<br>Every brand.</h2>
+        <div class="cb-vshow-brands" role="tablist" aria-label="Brand"></div>
+        <div class="cb-vshow-info">
+          <div class="cb-vshow-logo"></div>
+          <p class="cb-vshow-tagline"></p>
+          <ul class="cb-vshow-stats"></ul>
+          <a class="cb-vshow-cta" href="brand.html?brand=awdis">Shop the brand
+            &#8594;</a>
+        </div>
+        <button type="button" class="cb-vshow-pause" aria-pressed="false">Pause motion</button>
+      </div>
+      <div class="cb-vshow-cols" aria-label="Colour packshots"></div>
+    </section>
+
+    <!-- Vertical supply chain -->
+    <!-- CONTENT CHECK: confirm the production stages below match Citadel's actual supply chain before publishing. -->
+    <section class="cb-vertical" id="vertical" aria-labelledby="cb-vertical-title">
+      <div class="cb-vertical-intro">
+        <div class="cb-reveal">
+          <p class="cb-kicker">Vertical supply chain</p>
+          <h2 id="cb-vertical-title">From yarn to your door, one supply
+            chain.</h2>
+        </div>
+        <p class="cb-reveal">We manage each stage ourselves instead of buying
+          finished goods through layers of middlemen. That&rsquo;s why colours
+          match from style to style, prices hold steady season after season,
+          and the stock is already in our US warehouses when you order.</p>
+      </div>
+      <div class="cb-vertical-body">
+        <figure class="cb-vertical-img cb-reveal"><img data-slot="vertical" data-slot-label="Vertical integration photo"
+            src="assets/dark-theme/image-020.jpg"
+            alt="Close-up of folded fabric in bottle green, burgundy, charcoal and red" loading="lazy"></figure>
+        <ol class="cb-vsteps">
+          <li class="cb-reveal"><span>01</span>
+            <div>
+              <h3>Yarn &amp;
+                fabric</h3>
+              <p>Ring-spun cotton and cotton-poly blends knitted
+                to our own weights and handle.</p>
+            </div>
+          </li>
+          <li class="cb-reveal"><span>02</span>
+            <div>
+              <h3>Dye &amp;
+                finish</h3>
+              <p>Dyed to one colour standard, so a Jet Black
+                hoodie matches a Jet Black tee.</p>
+            </div>
+          </li>
+          <li class="cb-reveal"><span>03</span>
+            <div>
+              <h3>Cut &amp;
+                sew</h3>
+              <p>Made to our patterns and size specs for the same
+                fit every season.</p>
+            </div>
+          </li>
+          <li class="cb-reveal"><span>04</span>
+            <div>
+              <h3>Quality
+                check</h3>
+              <p>Weight, size and shade checked batch by batch
+                before anything ships.</p>
+            </div>
+          </li>
+          <li class="cb-reveal"><span>05</span>
+            <div>
+              <h3>US
+                warehouses</h3>
+              <p>Held in Kansas City, MO and Kingstree, SC
+                &mdash; same-day shipping on orders before 3PM.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <ul class="cb-vbenefits">
+        <li class="cb-reveal"><b>Colour you can match</b><span>One colour
+            standard across every style and brand.</span></li>
+        <li class="cb-reveal"><b>Prices without the middle</b><span>No layers
+            of margin between the factory and you.</span></li>
+        <li class="cb-reveal"><b>Stock you can see</b><span>Live stock by
+            warehouse for every colour and size once you log in.</span></li>
+      </ul>
+    </section>
+
+    <!-- Sustainability -->
+    <!-- CONTENT CHECK: the commitments below are written as principles. Add certifications, fibre content or figures only once Citadel confirms them. -->
+    <section class="cb-sustain" id="sustainable" aria-labelledby="cb-sustain-title">
+      <figure class="cb-sustain-img cb-reveal"><img data-slot="sustainable" data-slot-label="Sustainability photo"
+          src="assets/dark-theme/image-018.jpg" alt="Hoodies in natural, sage, sky blue, burgundy and black on a rail"
+          loading="lazy"></figure>
+      <div class="cb-sustain-copy">
+        <p class="cb-kicker">Sustainability</p>
+        <h2 id="cb-sustain-title" class="cb-reveal">Made to be worn, not
+          wasted.</h2>
+        <p class="cb-sustain-lede cb-reveal">The most sustainable garment is
+          the one that gets worn for years. That idea shapes the fabrics we
+          choose, how we build each piece and what we do with stock that sells
+          slowly.</p>
+        <ul class="cb-sustain-list">
+          <li class="cb-reveal">
+            <h3>Built to last</h3>
+            <p>Midweight and
+              heavyweight fabrics with details like double-fabric hoods and
+              brushed fleece, made to be washed and worn again and
+              again.</p>
+          </li>
+          <li class="cb-reveal">
+            <h3>Nothing left behind</h3>
+            <p>Slow-moving
+              colourways go to our <a href="outlet.html">online outlet</a> at
+              lower prices instead of sitting on shelves or being thrown
+              away.</p>
+          </li>
+          <li class="cb-reveal">
+            <h3>Fewer, fuller shipments</h3>
+            <p>Two US
+              warehouses and one supply chain mean stock moves in planned,
+              full loads rather than rushed part-shipments.</p>
+          </li>
+          <li class="cb-reveal">
+            <h3>Responsible partners</h3>
+            <p>We work with
+              long-term production partners and hold them to clear standards
+              for people and the environment.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Outlet teaser: cards built by assets/js/outlet-page.js from assets/js/outlet.js -->
+    <section class="cb-otz" id="outlet" aria-labelledby="cb-otz-title">
+      <div class="cb-otz-head cb-reveal">
+        <div>
+          <p class="cb-kicker">Citadel Outlet</p>
+          <h2 id="cb-otz-title">Slow-moving styles, up to <span data-outlet="max">60%</span> off.</h2>
+        </div>
+        <p>Colourways that move more slowly are sold online in any quantity
+          until they&rsquo;re gone. Log in to see prices and stock, then order
+          straight from the outlet.</p>
+        <a class="cb-button" href="outlet.html"><span>Shop all <span data-outlet="count"></span> colourways</span></a>
+      </div>
+      <div class="cb-otz-grid"></div>
+    </section>
+
+    <section class="cb-editorial-grid" id="featured" aria-label="Featured apparel">
+      <a class="cb-editorial-card cb-ed-right cb-reveal" style="grid-area:e" href="product.html?code=JHA043"
+        data-shop="JHA043,JHA003"><img data-slot="featured-1" data-slot-label="Featured grid 1"
+          src="assets/dark-theme/image-004.jpg" alt="Varsity Contrast Hoodie" loading="lazy">
+        <div class="cb-editorial-copy"><span>Fresh
+            Layers</span>
+          <h2>The Varsity<br>Contrast Hoodie</h2>
+          <p>A modern
+            spin on a classic varsity look. Contrast details give it standout
+            appeal, built for layering.</p><b class="cb-button">Check It
+            Out</b>
+        </div>
+      </a>
+      <a class="cb-editorial-card cb-reveal" style="grid-area:b" href="product.html?code=JTA001"
+        data-shop="JTA001,ATA001"><img data-slot="featured-2" data-slot-label="Featured grid 2"
+          src="assets/dark-theme/image-010.jpg" alt="Everyday orange T-shirt" loading="lazy"></a>
+      <a class="cb-editorial-card cb-reveal" style="grid-area:d" href="product.html?code=JHA101" data-shop="JHA101"><img
+          data-slot="featured-3" data-slot-label="Featured grid 3" src="assets/figma/editorial-red-hoodie.jpg"
+          alt="Red hoodie" loading="lazy"></a>
+      <a class="cb-editorial-card cb-reveal" style="grid-area:c" href="product.html?code=JHA001"
+        data-shop="JHA001,JTA001"><img data-slot="featured-4" data-slot-label="Featured grid 4"
+          src="assets/dark-theme/image-008.jpg" alt="Everyday pastel T-shirts" loading="lazy"></a>
+      <a class="cb-editorial-card cb-reveal" style="grid-area:f" href="product.html?code=JHA120"
+        data-shop="JHA120,JHA123"><img data-slot="featured-5" data-slot-label="Featured grid 5"
+          src="assets/figma/editorial-cream-hoodie.png" alt="Cream hoodie" loading="lazy"></a>
+      <a class="cb-editorial-card cb-reveal" style="grid-area:a" href="product.html?code=JHA001"
+        data-shop="JHA001,JTA001,JHA030"><img data-slot="featured-6" data-slot-label="Featured grid 6"
+          src="assets/figma/editorial-everyday.png" alt="Everyday T-shirts and hoodies" loading="lazy">
+        <div class="cb-editorial-copy"><span>Everyday Staples</span>
+          <h2>The
+            Everyday T<br>and Hoodie</h2>
+          <p>Soft cotton comfort in fresh
+            seasonal hues. Easy to wear, easy to pair.</p><b class="cb-button">Check It Out</b>
+        </div>
+      </a>
+    </section>
+
+    <section class="cb-story-strip" id="story">
+      <div class="cb-story-title cb-reveal">
+        <h2>Our Story.<br>Our
+          Brand.</h2>
+      </div>
+      <div class="cb-story-copy cb-reveal">
+        <p>Doing the right thing runs
+          through the heart of everything we do.</p><a class="cb-button" href="brand.html?brand=all">Learn More</a>
+      </div>
+      <img data-slot="story" data-slot-label="Story strip banner" class="cb-story-image"
+        src="assets/dark-theme/image-006.jpg" alt="AWDis seasonal hoodies" loading="lazy">
+    </section>
+
+    <section class="cb-lifestyle-grid" aria-label="Citadel Brands lifestyle">
+      <figure class="cb-reveal"><a href="product.html?code=JCA001" data-shop="JCA001,JCA002"><img
+            data-slot="lifestyle-1" data-slot-label="Lifestyle grid 1" src="assets/dark-theme/image-000.jpg"
+            alt="Friends in active T-shirts" loading="lazy"></a></figure>
+      <figure class="cb-reveal"><a href="product.html?code=JHA030" data-shop="JHA030,JHA123"><img
+            data-slot="lifestyle-2" data-slot-label="Lifestyle grid 2" src="assets/dark-theme/image-026.jpg"
+            alt="Friends wearing premium sweatshirts" loading="lazy"></a></figure>
+      <figure class="cb-reveal"><a href="product.html?code=JHA043" data-shop="JHA043,JHA003"><img
+            data-slot="lifestyle-3" data-slot-label="Lifestyle grid 3" src="assets/dark-theme/image-004.jpg"
+            alt="Friends in varsity styles" loading="lazy"></a></figure>
+    </section>
+
+    <section class="cb-instagram" id="instagram">
+      <header class="cb-instagram-head cb-reveal">
+        <h2>Follow Us<br>On
+          Instagram</h2>
+        <p>For behind the scenes, product drops, and everyday
+          essentials in action.</p><a class="cb-button" href="https://www.instagram.com/citadelbrands" target="_blank"
+          rel="noopener">@CitadelBrands</a>
+      </header>
+      <div class="cb-instagram-grid">
+        <a class="cb-reveal" data-shop="JHA001" href="https://www.instagram.com/citadelbrands" target="_blank"
+          rel="noopener"><img data-slot="instagram-1" data-slot-label="Instagram 1"
+            src="assets/dark-theme/image-040.jpg" alt="Instagram post 1" loading="lazy"></a>
+        <a class="cb-reveal" data-shop="JHA001,JHA050" href="https://www.instagram.com/citadelbrands" target="_blank"
+          rel="noopener"><img data-slot="instagram-2" data-slot-label="Instagram 2"
+            src="assets/dark-theme/image-042.jpg" alt="Instagram post 2" loading="lazy"></a>
+        <a class="cb-reveal" data-shop="JHA120,JHA123" href="https://www.instagram.com/citadelbrands" target="_blank"
+          rel="noopener"><img data-slot="instagram-3" data-slot-label="Instagram 3"
+            src="assets/dark-theme/image-044.jpg" alt="Instagram post 3" loading="lazy"></a>
+        <a class="cb-reveal" data-shop="JHY001" href="https://www.instagram.com/citadelbrands" target="_blank"
+          rel="noopener"><img data-slot="instagram-4" data-slot-label="Instagram 4"
+            src="assets/dark-theme/image-032-hd.jpg" alt="Instagram post 4" loading="lazy"></a>
+        <a class="cb-reveal" data-shop="JHA101" href="https://www.instagram.com/citadelbrands" target="_blank"
+          rel="noopener"><img data-slot="instagram-5" data-slot-label="Instagram 5"
+            src="assets/dark-theme/image-046.jpg" alt="Instagram post 5" loading="lazy"></a>
+        <a class="cb-reveal" data-shop="JHA101" href="https://www.instagram.com/citadelbrands" target="_blank"
+          rel="noopener"><img data-slot="instagram-6" data-slot-label="Instagram 6"
+            src="assets/figma/editorial-black-hoodie.png" alt="Instagram post 6" loading="lazy"></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cb-site-footer" id="footer">
+    <div class="cb-footer-grid">
+      <div class="cb-footer-brand"><img src="assets/logos/citadel-brands-logo.png" alt="Citadel Brands"
+          style="width:230px;height:auto">
+        <p>Decorator-ready apparel from
+          leading brands, supported by fast fulfillment and dependable service
+          across the United States.</p>
+        <p>Kingstree, South
+          Carolina<br>800-229-1240</p>
+      </div>
+      <div>
+        <h4>Shop</h4><a href="brand.html?brand=all&amp;cat=tshirts">T-Shirts</a><a
+          href="brand.html?brand=all&amp;cat=fleece">Fleece</a><a href="brand.html?brand=all&amp;cat=polos">Polos</a><a
+          href="brand.html?brand=all&amp;cat=performance">Performance</a><a href="outlet.html">Outlet</a>
+      </div>
+      <div>
+        <h4>Brands</h4><a href="brand.html?brand=awdis">AWDis</a><a href="brand.html?brand=woodbrook">Woodbrook</a><a
+          href="#featured">JH501</a><a href="#featured">New Arrivals</a>
+      </div>
+      <div>
+        <h4>Company</h4><a href="#model">Why Citadel</a><a href="#vertical">Vertical supply chain</a><a
+          href="sustainability.html">Sustainability</a><a href="#footer">Contact</a><a
+          href="#footer">Shipping</a><a href="#footer">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="cb-footer-bottom"><span>© 2026 Citadel Brands. All rights
+        reserved.</span><span>Static homepage demonstration</span></div>
+  </footer>
+
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/product-media.js"></script>
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/site-apply.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/home.js"></script>
+  <script src="assets/js/outlet.js"></script>
+  <script src="assets/js/outlet-page.js"></script>
+  <script>
+    (function () {
+      "use strict";
+      var root = document.getElementById("cb-homepage-v4");
+      if (!root || root.getAttribute("data-cb-ready") === "true") return;
+      root.setAttribute("data-cb-ready", "true");
+      root.classList.add("cb-animate");
+
+      var items = root.querySelectorAll(".cb-reveal");
+      function showAll() { Array.prototype.forEach.call(items, function (item) { item.classList.add("cb-visible"); }); }
+      if (!("IntersectionObserver" in window)) { showAll(); }
+      else {
+        var observer = new IntersectionObserver(function (entries) { entries.forEach(function (entry) { if (entry.isIntersecting) { entry.target.classList.add("cb-visible"); observer.unobserve(entry.target); } }); }, { threshold: .12, rootMargin: "0px 0px -40px 0px" });
+        Array.prototype.forEach.call(items, function (item) { observer.observe(item); });
+      }
+
+      // Hero slider: crossfade, autoplay driven by the progress-bar animation, pause on hover/focus/hidden tab
+      var hero = root.querySelector(".cb-hero");
+      var slides = hero ? hero.querySelectorAll(".cb-slide") : [];
+      if (slides.length > 1) {
+        var dots = hero.querySelectorAll(".cb-slider-dots button");
+        var countEl = hero.querySelector(".cb-slider-count b");
+        var pauseBtn = hero.querySelector(".cb-slider-pause");
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var current = 0, userPaused = reduceMotion, hovering = false, focusInside = false;
+        function pad(n) { return (n < 10 ? "0" : "") + n; }
+        function syncPaused() {
+          var paused = userPaused || hovering || focusInside || document.hidden;
+          hero.classList.toggle("cb-paused", paused);
+          hero.classList.toggle("cb-user-paused", userPaused);
+          hero.classList.toggle("cb-static", reduceMotion);
+          if (pauseBtn) pauseBtn.setAttribute("aria-label", userPaused ? "Play slideshow" : "Pause slideshow");
+        }
+        function syncVideos(restart) {
+          Array.prototype.forEach.call(slides, function (slide, i) {
+            var video = slide.querySelector("video");
+            if (!video) return;
+            if (i === current && !userPaused && !reduceMotion) {
+              if (restart) { try { video.currentTime = 0; } catch (e) { } }
+              var playing = video.play();
+              if (playing && playing.catch) playing.catch(function () { });
+            } else {
+              video.pause();
+            }
+          });
+        }
+        function goTo(index) {
+          index = (index + slides.length) % slides.length;
+          Array.prototype.forEach.call(slides, function (slide, i) {
+            var on = i === index;
+            slide.classList.toggle("cb-active", on);
+            slide.setAttribute("aria-hidden", String(!on));
+            if (on) slide.removeAttribute("inert"); else slide.setAttribute("inert", "");
+          });
+          Array.prototype.forEach.call(dots, function (dot, i) {
+            dot.classList.remove("cb-active");
+            dot.classList.toggle("cb-done", i < index);
+            dot.setAttribute("aria-current", String(i === index));
+          });
+          void hero.offsetWidth; // restart the progress animation
+          if (dots[index]) dots[index].classList.add("cb-active");
+          if (countEl) countEl.textContent = pad(index + 1);
+          hero.classList.toggle("cb-on-light", slides[index].classList.contains("cb-slide--light"));
+          current = index;
+          syncVideos(true);
+        }
+        Array.prototype.forEach.call(dots, function (dot, i) {
+          dot.addEventListener("click", function () { goTo(i); });
+          dot.addEventListener("animationend", function () { if (i === current && !reduceMotion) goTo(current + 1); });
+        });
+        hero.querySelector(".cb-slider-prev").addEventListener("click", function () { goTo(current - 1); });
+        hero.querySelector(".cb-slider-next").addEventListener("click", function () { goTo(current + 1); });
+        if (pauseBtn) pauseBtn.addEventListener("click", function () { userPaused = !userPaused; syncPaused(); syncVideos(false); });
+        // Pause only while reading the text or using the controls (the hero fills the screen, so not on any hover)
+        Array.prototype.forEach.call(hero.querySelectorAll(".cb-hero-copy, .cb-slide-copy, .cb-slider-ui"), function (zone) {
+          zone.addEventListener("mouseenter", function () { hovering = true; syncPaused(); });
+          zone.addEventListener("mouseleave", function () { hovering = false; syncPaused(); });
+        });
+        hero.addEventListener("focusin", function (event) {
+          var keyboard = true;
+          try { keyboard = event.target.matches(":focus-visible"); } catch (e) { }
+          if (keyboard) { focusInside = true; syncPaused(); }
+        });
+        hero.addEventListener("focusout", function (event) { if (!hero.contains(event.relatedTarget)) { focusInside = false; syncPaused(); } });
+        document.addEventListener("visibilitychange", syncPaused);
+        hero.addEventListener("keydown", function (event) {
+          if (event.key === "ArrowLeft") { goTo(current - 1); }
+          else if (event.key === "ArrowRight") { goTo(current + 1); }
+        });
+        // Swipe on touch screens
+        var touchX = null, touchY = null;
+        hero.addEventListener("touchstart", function (event) { touchX = event.touches[0].clientX; touchY = event.touches[0].clientY; }, { passive: true });
+        hero.addEventListener("touchend", function (event) {
+          if (touchX === null) return;
+          var dx = event.changedTouches[0].clientX - touchX, dy = event.changedTouches[0].clientY - touchY;
+          if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) goTo(current + (dx < 0 ? 1 : -1));
+          touchX = null;
+        }, { passive: true });
+        goTo(0);
+        syncPaused();
+      }
+
+    })();
+  </script>
+  <script>
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
+    /* Links from other pages (e.g. the Digital Product Passport's "Back to Home" → #model-sustainable)
+       land before the page finishes building, so re-align to the target once everything has loaded. */
+    window.addEventListener("load", function () {
+      var target = location.hash && document.getElementById(location.hash.slice(1));
+      if (!target) {
+        if (!location.hash) window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+        return;
+      }
+      var section = target.closest("section") || target;
+      [section].concat([].slice.call(section.querySelectorAll(".cb-reveal"))).forEach(function (el) {
+        el.classList.add("cb-visible");
+      });
+      setTimeout(function () { target.scrollIntoView({ block: "center", behavior: "instant" }); }, 150);
+    });
+  </script>
+</body>
+
+</html>
